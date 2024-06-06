@@ -2,7 +2,6 @@ import javax.swing.JOptionPane;
 
 public class App {
     public static void main(String[] args) throws Exception {
-     //   System.out.println("Olá Mundo!");
 
     /*  -------------------------------------------------
         | Tipos de variáveis |
@@ -20,7 +19,8 @@ public class App {
 
 //------------------------------------------------------------------------------------------------------------------------    
    
-/* 
+    /*
+
     int idade = 17;
 
     if (idade < 18) {
@@ -32,6 +32,7 @@ public class App {
     }
 
     printf x println
+    
     */
 
 //------------------------------------------------------------------------------------------------------------------------    
