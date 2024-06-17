@@ -37,4 +37,5 @@ public class Produto {
 
             return fs.format(fabricacao);
     }
+        Produto pao = new Produto();
 }
