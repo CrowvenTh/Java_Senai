@@ -39,15 +39,15 @@ public class Veiculo {
 
     public static void main(String[] args) throws Exception {
         
+        
         Veiculo carro1 = new Veiculo();
-
         carro1.setNome("Hilux");
         carro1.setModelo("Caminhonete");
         carro1.setQtdPneus(4);
         carro1.setPotencia(240);
-   }
-   public void Ligar(){
-        System.out.println("O veiculo"+ carro1.getNome());
+    }
+    public void Ligar(){
+        // System.out.println("O veiculo"+ carro1.getNome());
 
    }
 
