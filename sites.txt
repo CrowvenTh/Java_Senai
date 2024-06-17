@@ -1,0 +1,8 @@
+Thema VS code
+https://vscodethemes.com/e/deadrevolver.dark-space-theme/dark-space?language=java
+
+TryHackMe - https://tryhackme.com/
+
+BeeCrowd - https://judge.beecrowd.com/pt
+
+GitBook - https://glysns.gitbook.io/java-basico
