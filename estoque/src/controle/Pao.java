@@ -49,5 +49,5 @@ public static LocalDate validade(LocalDate fabricacao, LocalDate validade){
         System.out.println("Data de fabricação atualizada: " + novaDataFabricacao);
         System.out.println(validade(novaDataFabricacao, dataValidade));
     }
-    
+       
 }
