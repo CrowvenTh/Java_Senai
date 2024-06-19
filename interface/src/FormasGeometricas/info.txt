@@ -1,0 +1,8 @@
+Interface
+    getNomeFigura
+    getArea
+    getPerimetro
+Classes
+    quadrado
+    Trianguo
+    Circulo
