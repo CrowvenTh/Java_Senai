@@ -25,11 +25,11 @@ public class Peta extends Produto {
 
     }
 
-    public double venda( int pacote){
+    public double venderQuilo( int pacote){
         return pacote * 6.70;
     }
 
-    public double venda(double quilo){
+    public double venderPacote(double quilo){
         return quilo * 15.45;
     }
 }

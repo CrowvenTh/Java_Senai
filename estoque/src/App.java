@@ -46,6 +46,7 @@ public class App extends Produto{
          Collections.sort(tipoPao);
          for (String i : tipoPao){
             System.out.println(i);
+
         }
     }
 }
