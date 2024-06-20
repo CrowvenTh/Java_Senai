@@ -3,6 +3,7 @@ package FormasGeometricas;
 public class Quadrado implements Formas{
 
     private double lado;
+    
 
     public Quadrado(double lado){
         this.lado = lado;
@@ -17,6 +18,12 @@ public class Quadrado implements Formas{
     @Override
     public double getPerimetro(){
         return 4*lado;
+    }
+    public double getLado() {
+        return lado;
+    }
+    public void setLado(double lado) {
+        this.lado = lado;
     }
 
 }
