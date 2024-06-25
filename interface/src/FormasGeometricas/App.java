@@ -13,7 +13,7 @@ public class App {
         Formas quadrado = new Quadrado(0);
 
         App.Info(quadrado);
-        System.out.println(App.Info(quadrado));
+        // System.out.println(App.Info(quadrado));
 
     }
 }
