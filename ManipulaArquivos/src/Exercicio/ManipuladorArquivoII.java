@@ -5,7 +5,6 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Scanner;
 
 public class ManipuladorArquivoII {
     public static void Reader(String way) throws IOException{
@@ -28,21 +27,19 @@ public class ManipuladorArquivoII {
         buff.close();
     }
     public static void TextWriter(String way)throws IOException{
-        BufferedWriter writer = new BufferedWriter(new FileWriter(way));
+        BufferedWriter writer = new BufferedWriter(new FileWriter(way, true));
         String line = "";
-        writer.append("1 2" +"\n");
-        writer.append("1 3" +"\n");
-        writer.append("1 4" +"\n");
-        writer.append("1 5" +"\n");
-        writer.append("1 6" +"\n");
-        writer.append("1 7" +"\n");
-        writer.append("1 8" +"\n");
-        writer.append("1 9" +"\n");
-        writer.append("1 0" +"\n");
-        writer.append("2 1" +"\n");
-        writer.append("2 2" +"\n");
-
-
+        writer.append("1 72" +"\n");
+        writer.append("2 53" +"\n");
+        writer.append("3 49" +"\n");
+        writer.append("5 55" +"\n");
+        writer.append("6 61" +"\n");
+        writer.append("7 79" +"\n");
+        writer.append("8 80" +"\n");
+        writer.append("9 96" +"\n");
+        writer.append("0 87" +"\n");
+        writer.append("2 15" +"\n");
+        writer.append("8 24" +"\n");
         writer.close();
     }
 }
