@@ -1,4 +1,4 @@
-package DesafioII;
+package manipulaTabuada;
 
 import java.io.IOException;
 

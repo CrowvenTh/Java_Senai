@@ -1,4 +1,4 @@
-package DesafioII;
+package manipulaTabuada;
 public class tabuada {
     public static void main(String[] args) {
         
