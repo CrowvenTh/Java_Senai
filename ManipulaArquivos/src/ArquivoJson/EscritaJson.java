@@ -16,7 +16,7 @@ public class EscritaJson {
         JSONObject jsonObject;
 
         JSONParser parse = new JSONParser();
-
+        
         String nome;
         String ultimoNome;
         String cidade;
@@ -29,6 +29,7 @@ public class EscritaJson {
             cidade = (String) jsonObject.get("Cidade");
             estado = (String) jsonObject.get("Estado");
             System.out.println("O nome comleto dele é "+ nome +" "+ ultimoNome +" ,nascido em "+ cidade +", "+ estado +".");
+            
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
