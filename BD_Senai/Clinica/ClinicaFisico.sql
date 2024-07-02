@@ -17,7 +17,7 @@ create table if not exists paciente (
     cep bigint not null,
     nascimento date,
     nomePaciente varchar(100) not null,
-		constraint paiente_pk primary key(id)
+		constraint paciente_pk primary key(idPaciente)
 )engine = InnoDB;
 
 create table if not exists especialidade (
