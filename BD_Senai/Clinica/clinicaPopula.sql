@@ -32,6 +32,7 @@ insert into telefone(telefone, idPaciente) values
 (61923345446, 3);
 select * from telefone;
 select * from PossuiEspecialidade;
+
 insert into PossuiEspecialidade (idEspecialidade, numeroCrm, estadoCrm) values
 (1, 123456, 'DF'),
 (2, 654321, 'PA'),
