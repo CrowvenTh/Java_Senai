@@ -26,6 +26,17 @@ insert into consulta(idConsulta, datahora, crm, estadoCrm, idPaciente) values
 (null, '2024-06-30 13:45:44','768593','DF',1); 
 select * from consulta;
 
+insert into telefone(telefone, idPaciente) values
+(61988889999, 1),
+(61909907667, 2),
+(61923345446, 3);
+select * from telefone;
+select * from PossuiEspecialidade;
+insert into PossuiEspecialidade (idEspecialidade, numeroCrm, estadoCrm) values
+(1, 123456, 'DF'),
+(2, 654321, 'PA'),
+(3, 768593, 'DF');
+
 select m.crm as CRM, m.estadoCrm as UF, m.nomeMed as Nome, e.nomeEspecialidade as Especialidade
 	from medico as m
 		inner join especialidade as e

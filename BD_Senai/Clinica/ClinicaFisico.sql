@@ -46,3 +46,13 @@ create table telefone (
         constraint telefone_paciente_fk foreign key (idPaciente) references paciente (idPaciente)
 			on delete cascade
 ) engine = InnoDB;
+
+create table PossuiEspecialidade (
+	idEspecialidade int not null,
+    numeroCrm bigint not null,
+    estadoCrm char(2) not null,
+		constraint Possui_Especialidade_uk unique (idEspecialidade, numeroCrm, estadoCrm),
+        constraint possui_medico_fk foreign key (numeroCrm, estadoCrm) references medico(crm, estadoCrm)
+			on delete cascade,
+            constraint Possui_Especialidade_fk foreign key (idEspecialidade) references especialidade(idEspecialidade)
+)engine = InnoDB;
