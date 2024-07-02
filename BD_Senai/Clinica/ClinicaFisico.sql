@@ -37,4 +37,12 @@ create table if not exists consulta (
 			on delete cascade,
 		constraint consulta_paciente_fk foreign key (idPaciente) references paciente (idPaciente)
 			on delete cascade
-)engine = InnoDb;
+)engine = InnoDB;
+
+create table telefone (
+	telefone decimal(11) not null,
+    idPaciente int not null,
+		constraint telefone_uk unique(telefone, idPaciente),
+        constraint telefone_paciente_fk foreign key (idPaciente) references paciente (idPaciente)
+			on delete cascade
+) engine = InnoDB;
