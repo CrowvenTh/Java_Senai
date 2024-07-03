@@ -1,3 +1,5 @@
+drop database clinica;
+
 create schema if not exists Clinica default character set utf8;
 use Clinica;
 
@@ -47,6 +49,8 @@ create table telefone (
 			on delete cascade
 ) engine = InnoDB;
 
+select * from PossuiEspecialidade;
+
 create table PossuiEspecialidade (
 	idEspecialidade int not null,
     numeroCrm bigint not null,
@@ -61,10 +65,16 @@ create table receita (
 	idReceita int not null auto_increment,
     idConsulta int not null,
     descricao varchar(100) not null,
-    medicamentoPrescrito varchar(50),
-		constraint receita_pk unique (idReceita),
-		constraint receita_fk foreign key (idConsulta) references consulta(idConsulta)
+		constraint idReceita_pk primary key (idReceita),
+		constraint idConsulta_fk foreign key (idConsulta) references consulta(idConsulta)
 		on delete cascade
 )engine = InnoDB;
+
+create table medicamentoPresc(
+	medicamento varchar(50) not null,
+    idReceita int not null,
+		constraint idReceita_fk foreign key (idReceita) references receita(idReceita)
+        on delete cascade
+) engine = InnoDB;
 
 show tables;

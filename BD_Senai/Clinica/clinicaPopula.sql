@@ -38,6 +38,19 @@ insert into PossuiEspecialidade (idEspecialidade, numeroCrm, estadoCrm) values
 (2, 654321, 'PA'),
 (3, 768593, 'DF');
 
+insert into receita (idReceita, idConsulta, descricao) values
+(null, 1, '2x por dia'),
+(null, 2, '12h em 12h'),
+(null,3,'1 por semana');
+
+insert into medicamentoPresc (medicamento, idReceita) values
+('Nosvalgina',1),
+('Dorflex',2),
+('Torcilax',3);
+
+select * from medicamentoPresc;
+select * from receita;
+
 select m.crm as CRM, m.estadoCrm as UF, m.nomeMed as Nome, e.nomeEspecialidade as Especialidade
 	from medico as m
 		inner join especialidade as e
