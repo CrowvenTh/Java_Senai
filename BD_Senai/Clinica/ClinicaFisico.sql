@@ -56,3 +56,15 @@ create table PossuiEspecialidade (
 			on delete cascade,
             constraint Possui_Especialidade_fk foreign key (idEspecialidade) references especialidade(idEspecialidade)
 )engine = InnoDB;
+
+create table receita (
+	idReceita int not null auto_increment,
+    idConsulta int not null,
+    descricao varchar(100) not null,
+    medicamentoPrescrito varchar(50),
+		constraint receita_pk unique (idReceita),
+		constraint receita_fk foreign key (idConsulta) references consulta(idConsulta)
+		on delete cascade
+)engine = InnoDB;
+
+show tables;

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class App {
+public class e1_qualSeuNome {
     public static void main(String[] args) throws Exception {
         Scanner entrada = new Scanner(System.in);
         
