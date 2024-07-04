@@ -1,4 +1,4 @@
-drop database clinica;
+-- drop database clinica;
 
 create schema if not exists Clinica default character set utf8;
 use Clinica;
@@ -48,8 +48,6 @@ create table telefone (
         constraint telefone_paciente_fk foreign key (idPaciente) references paciente (idPaciente)
 			on delete cascade
 ) engine = InnoDB;
-
-select * from PossuiEspecialidade;
 
 create table PossuiEspecialidade (
 	idEspecialidade int not null,
