@@ -27,4 +27,4 @@ create view medico_especialidade_cardiologia (nomeMed, crm, estadoCrm)
 select * from medico_especialidade_cardiologia;
 
 select p.idPaciente, p.nomePaciente,p.cidade,p.estado, p.cep, p.sexo from paciente as p
-	where nomePaciente like '%Antonio%' group by nomePaciente asc; -- and cidade like '%Taguatinga%';
+	where nomePaciente like '%Antonio%' group by nomePaciente asc;
