@@ -22,6 +22,8 @@ INSERT INTO funcionario (nome, endereco, funcao, email) VALUES
 ('Bruno Souza', 'Quadra 202, Recanto das Emas', 'Auxiliar de Loja', 'bruno.souza@example.com'),
 ('Larissa Santos', 'Rua das Violetas, Valparaíso de Goiás', 'Assistente de Compras', 'larissa.santos@example.com');
     
+    select * from produto;
+    
 INSERT INTO cliente (cpf, nome, email, endereco) VALUES
 (12345678901, 'João da Silva', 'joao.silva@example.com', 'Quadra 301, Águas Claras'),
 (23456789012, 'Maria Santos', 'maria.santos@example.com', 'Quadra 602, Samambaia'),
