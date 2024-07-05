@@ -1,11 +1,4 @@
 use Papelaria;
-show tables;
-select * from funcionario;
-select * from cliente;
-select * from fornecedor;
-select * from produto;
-select * from venda;
-select * from listarProdutos;
 
 INSERT INTO funcionario (nome, endereco, funcao, email) VALUES
 ('Ana Oliveira', 'Quadra 301, Águas Claras', 'Vendedora', 'ana.oliveira@example.com'),
@@ -73,7 +66,6 @@ INSERT INTO fornecedor (cnpj, nome, telefone, email, endereco) VALUES
 ('19.204.162/0001-34', 'Papel e Luxo', 6312345678, 'contato@papeleluxo.com', 'Quadra 202, Recanto das Emas'),
 ('20.214.273/0001-45', 'Papelaria Master', 6323456789, 'contato@papelariamaster.com', 'Rua das Violetas, Valparaíso de Goiás');
 
-
 INSERT INTO produto (nome, preco, descricao, validade, quantidade, cnpj) VALUES
 ('Caderno Universitário', 15.90, 'Caderno espiral 100 folhas', '2024-12-31', 100, '12.345.678/0001-01'),
 ('Caneta Esferográfica', 2.50, 'Ponta média azul', NULL, 500, '23.456.789/0001-12'),
@@ -139,5 +131,3 @@ INSERT INTO listarProdutos (id, codigo, qtdVendido) VALUES
 (10008, 117, 3), 
 (10009, 118, 2), 
 (10009, 119, 2);
-
-    
