@@ -31,7 +31,6 @@ update produto set nome  = 'Revolver 38', preco = 500.00 where cnpj = '12.345.67
 -- deletando dados da tabela roduto --
 delete from produto where codigo = 120;
 
-
 -- deletando os produtos cujo valor é menor que R$6,00
 delete from produto where preco < 6 and cnpj = '23.456.789/0001-12';
 
