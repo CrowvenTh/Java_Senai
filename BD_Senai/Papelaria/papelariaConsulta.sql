@@ -43,14 +43,3 @@ SELECT f.nome as 'Nome Fornecedor', p.nome as 'Produto', SUM(lp.qtdVendido) as '
 			INNER JOIN listarProdutos as lp ON lp.codigo = p.codigo
 				GROUP BY f.nome, p.nome
 					ORDER BY SUM(lp.qtdVendido) DESC;
-                    
-select * from produto;
--- inserindo mais dados na tabela -- 
-INSERT INTO produto (nome, preco, descricao, validade, quantidade, cnpj) VALUES
-('Bola quadrada', 20.90, 'Infantil', '2024-12-31', 16, '12.345.678/0001-01');
-
--- atualizando dados da tabela -- 
-update produto set nome  = 'Revolver 38', preco = 500.00 where cnpj = '12.345.678/0001-01' and codigo = 120;
-
--- deletando dados da tabela roduto --
-delete from produto where codigo = 120;

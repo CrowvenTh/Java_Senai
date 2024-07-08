@@ -133,3 +133,4 @@ INSERT INTO listarProdutos (id, codigo, qtdVendido) VALUES
 (10008, 117, 3), 
 (10009, 118, 2), 
 (10009, 119, 2);
+
