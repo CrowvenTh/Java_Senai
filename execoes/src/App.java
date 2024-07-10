@@ -32,9 +32,9 @@ public class App {
         JTextField getTelefone = new JTextField();
 
         final JComponent[] campo = new JComponent[] {
-            new JLabel("CEP:"), cep,
-            new JLabel("CPF:"), cpf,
-            new JLabel("Telefone:"), telefone
+            // new JLabel("CEP:"), cep,
+            // new JLabel("CPF:"), cpf,
+            // new JLabel("Telefone:"), telefone
         };
 
         int resultado = JOptionPane.showConfirmDialog(
@@ -45,7 +45,7 @@ public class App {
         );
 
         if (resultado == JOptionPane.OK_OPTION) {
-            JOptionPane.showMessageDialog(null, "Você digitou: \n" +FormataCep(cep, padraoCep) + "\n" +FormataCpf(cpf, padraoCpf) + "\n"+ FormataTelefone(telefone, padraoTel));
+            // JOptionPane.showMessageDialog(null, "Você digitou: \n" +FormataCep(cep, padraoCep) + "\n" +FormataCpf(cpf, padraoCpf) + "\n"+ FormataTelefone(telefone, padraoTel));
             
             
         //  JOptionPane.showMessageDialog(null, "Você digitou: \n" +cep.getText() + ", \n" +cpf.getText() + ", \n" +telefone.getText());
