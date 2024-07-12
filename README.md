@@ -1,4 +1,3 @@
 ##  Curso de Desenvolvedor Java
 
-Material Utilizado durante as aulas de Desenvolvimento Java ofertadas pelo 
-senai Taugatinga
+Branch utilizada unicamente para acompanhar o progresso do primeiro [Projeto prático de Java](https://github.com/damarcones/AulasSenaiVespertino/tree/TrabalhoJava).
