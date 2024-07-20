@@ -9,6 +9,6 @@ public class App {
 
         //veiculo.cadastrarVeiculo();
         //veiculo.veiculoCadastrado();
-        veiculo.kmRodado();
+
     }
 }

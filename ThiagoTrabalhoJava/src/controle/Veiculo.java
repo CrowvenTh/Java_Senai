@@ -1,4 +1,4 @@
-package controle; //problema de referencia
+package controle;
 
 import java.util.Scanner;
 
@@ -119,22 +119,23 @@ public class Veiculo {
         this.marca = entrada.next();
         System.out.println("Modelo:");
         this.modelo = entrada.next();
-        System.out.println("anoModelo:");
+        System.out.println("Ano do modelo:");
         this.anoModelo = entrada.next();
-        System.out.println("anoFabricacao:");
+        System.out.println("Ano de Fabricação:");
         this.anoFabricacao = entrada.next();
-        System.out.println("motorizacao:");
+        System.out.println("Motorização:");
         this.motorizacao  = entrada.nextDouble();
-        System.out.println("cor:");
+        System.out.println("Cor:");
         this.cor = entrada.next();
-        System.out.println("placa:");
+        System.out.println("Placa:");
         this.placa = entrada.next();
-        System.out.println("renavam:");
+        System.out.println("Renavam:");
         this.renavam = entrada.nextInt();
-        System.out.println("numero de pneus:");
+        System.out.println("Número de Pneus:");
         this.numeroPneus = entrada.nextInt();
-        System.out.println("numero de passageiros:");
+        System.out.println("Número de Passageiros:");
         this.numeroPassageiros = entrada.nextInt();
+        System.out.println("Veiculo cadastrado com sucesso !");
     }
 
     public void veiculoCadastrado() {
@@ -157,7 +158,6 @@ public class Veiculo {
         double distancialInicial = entrada.nextDouble();
         System.out.println("Insira a distancia percorrida final(km)");
         System.out.println("Insira a quantidade de combustivel inserida");
-
 
     }
 }
