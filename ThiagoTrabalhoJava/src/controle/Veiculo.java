@@ -1,5 +1,7 @@
 package controle; //problema de referencia
 
+import java.util.Scanner;
+
 public class Veiculo {
     private String marca;
     private String modelo;
@@ -7,10 +9,12 @@ public class Veiculo {
     private String anoFabricacao;
     private double motorizacao;
     private double capacidadeTanque;
-    private String tipoCombustível;
+    private String tipoCombustivel;
     private String cor;
     private String placa;
-    private int renavan;
+    private int renavam;
+    private int numeroPneus;
+    private int numeroPassageiros;
 
     public String getMarca() {
         return marca;
@@ -48,7 +52,7 @@ public class Veiculo {
         return motorizacao;
     }
 
-    public void setMotorizacao(Double motorizacao) {
+    public void setMotorizacao(double motorizacao) {
         this.motorizacao = motorizacao;
     }
 
@@ -60,12 +64,12 @@ public class Veiculo {
         this.capacidadeTanque = capacidadeTanque;
     }
 
-    public String getTipoCombustível() {
-        return tipoCombustível;
+    public String getTipoCombustivel() {
+        return tipoCombustivel;
     }
 
-    public void setTipoCombustível(String tipoCombustível) {
-        this.tipoCombustível = tipoCombustível;
+    public void setTipoCombustivel(String tipoCombustivel) {
+        this.tipoCombustivel = tipoCombustivel;
     }
 
     public String getCor() {
@@ -84,11 +88,76 @@ public class Veiculo {
         this.placa = placa;
     }
 
-    public int getRenavan() {
-        return renavan;
+    public int getrenavam() {
+        return renavam;
     }
 
-    public void setRenavan(int renavan) {
-        this.renavan = renavan;
+    public void setrenavam(int renavam) {
+        this.renavam = renavam;
+    }
+
+    public int getNumeroPneus() {
+        return numeroPneus;
+    }
+
+    public void setNumeroPneus(int numeroPneus) {
+        this.numeroPneus = numeroPneus;
+    }
+
+    public int getNumeroPassageiros() {
+        return numeroPassageiros;
+    }
+
+    public void setNumeroPassageiros(int numeroPassageiros) {
+        this.numeroPassageiros = numeroPassageiros;
+    }
+
+    public void cadastrarVeiculo() {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("=== Insira os dados do veículo ===");
+        System.out.println("Marca:");
+        this.marca = entrada.next();
+        System.out.println("Modelo:");
+        this.modelo = entrada.next();
+        System.out.println("anoModelo:");
+        this.anoModelo = entrada.next();
+        System.out.println("anoFabricacao:");
+        this.anoFabricacao = entrada.next();
+        System.out.println("motorizacao:");
+        this.motorizacao  = entrada.nextDouble();
+        System.out.println("cor:");
+        this.cor = entrada.next();
+        System.out.println("placa:");
+        this.placa = entrada.next();
+        System.out.println("renavam:");
+        this.renavam = entrada.nextInt();
+        System.out.println("numero de pneus:");
+        this.numeroPneus = entrada.nextInt();
+        System.out.println("numero de passageiros:");
+        this.numeroPassageiros = entrada.nextInt();
+    }
+
+    public void veiculoCadastrado() {
+        System.out.println("=== Veiculos cadastrados ===");
+        System.out.println("Marca: " + getMarca());
+        System.out.println("Modelo: " + getModelo());
+        System.out.println("Ano do modelo: " + getAnoModelo());
+        System.out.println("Ano de Fabricação: " + getAnoFabricacao());
+        System.out.println("Cor: " + getCor());
+        System.out.println("Placa: " + getPlaca());
+        System.out.println("Renavam: " + getrenavam());
+        System.out.println("Número de Pneus: " + getNumeroPneus());
+        System.out.println("Números de passageiros: " + getNumeroPassageiros());
+        System.out.println("===============\n");
+    }
+
+    public void MediaConsumo(){
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Insira a distancia percorrida inicial(km)");
+        double distancialInicial = entrada.nextDouble();
+        System.out.println("Insira a distancia percorrida final(km)");
+        System.out.println("Insira a quantidade de combustivel inserida");
+
+
     }
 }
