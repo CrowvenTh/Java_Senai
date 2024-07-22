@@ -32,7 +32,10 @@ public class Aluno {
     @NotNull
     private String Disciplina;
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     @Column(name = "Matricula")
     @NotNull
     @Size(min = 5, max = 50, message = "A matricula deve conter entre 5 a 50 caracteres")
