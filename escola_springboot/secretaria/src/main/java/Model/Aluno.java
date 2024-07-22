@@ -27,6 +27,12 @@ public class Aluno {
     @NotNull
     private String nome;
 
+    @Column(name = "Disciplina")
+    @Enumerated(EnumType.STRING)
+    @NotNull
+    private String Disciplina;
+
+
     @Column(name = "Matricula")
     @NotNull
     @Size(min = 5, max = 50, message = "A matricula deve conter entre 5 a 50 caracteres")
