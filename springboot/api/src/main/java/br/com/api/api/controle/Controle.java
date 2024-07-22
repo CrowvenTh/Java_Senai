@@ -15,8 +15,6 @@ import br.com.api.api.modelo.Pessoa;
 import br.com.api.api.repositorio.PessoaRepositorio;
 import org.springframework.web.bind.annotation.RequestParam;
 
-
-
 @RestController
 public class Controle {
 
@@ -24,7 +22,7 @@ public class Controle {
     private PessoaRepositorio funcao;
 
     @PostMapping("/tudo")
-    public Pessoa salvar(@RequestBody Pessoa pessoinha){
+    public Pessoa salvar(@RequestBody Pessoa pessoinha) {
         return funcao.save(pessoinha);
     }
 
@@ -42,15 +40,11 @@ public class Controle {
     public Pessoa editar(@RequestBody Pessoa pessoinha) {
         return funcao.save(pessoinha);
     }
-    
-    
-    
 
     @GetMapping("")
-    public String mensagem(){
+    public String mensagem() {
         return "Olá Mundo!";
     }
-
 
     @GetMapping("/bemvindo")
     public String bemVindo() {
@@ -62,12 +56,12 @@ public class Controle {
         // Regra de negocio;
         // Organização da informação;
         // Apresentação dos dados;
-        return "Bem vindo(a) professor " +nome;
+        return "Bem vindo(a) professor " + nome;
     }
 
     @PostMapping("/pessoa")
-    public Pessoa pessoa (@RequestBody Pessoa p){
+    public Pessoa pessoa(@RequestBody Pessoa p) {
         return p;
     }
-    
+
 }
