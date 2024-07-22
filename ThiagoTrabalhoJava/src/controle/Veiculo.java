@@ -2,6 +2,9 @@ package controle;
 
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
 public class Veiculo implements Automovel {
     private String marca;
     private String modelo;
@@ -113,29 +116,56 @@ public class Veiculo implements Automovel {
     }
 
     public void cadastrarVeiculo() {
-        Scanner entrada = new Scanner(System.in);
-        System.out.println("=== Insira os dados do veículo ===");
-        System.out.println("Marca:");
-        this.marca = entrada.next();
-        System.out.println("Modelo:");
-        this.modelo = entrada.next();
-        System.out.println("Ano do modelo:");
-        this.anoModelo = entrada.next();
-        System.out.println("Ano de Fabricação:");
-        this.anoFabricacao = entrada.next();
-        System.out.println("Motorização:");
-        this.motorizacao = entrada.nextDouble();
-        System.out.println("Cor:");
-        this.cor = entrada.next();
-        System.out.println("Placa:");
-        this.placa = entrada.next();
-        System.out.println("Renavam:");
-        this.renavam = entrada.nextInt();
-        System.out.println("Número de Pneus:");
-        this.numeroPneus = entrada.nextInt();
-        System.out.println("Número de Passageiros:");
-        this.numeroPassageiros = entrada.nextInt();
-        System.out.println("Veiculo cadastrado com sucesso !");
+        /*
+         *  * Scanner entrada = new Scanner(System.i
+         *  * System.out.println("=== Insira os dados do veículo ===
+         *  * System.out.println("Marca:
+         *  * this.marca = entrada.next
+         *  * System.out.println("Modelo:
+         *  * this.modelo = entrada.next
+         *  * System.out.println("Ano do modelo:
+         *  * this.anoModelo = entrada.next
+         *  * System.out.println("Ano de Fabricação:
+         *  * this.anoFabricacao = entrada.next
+         *  * System.out.println("Motorização:
+         *  * this.motorizacao = entrada.nextDouble
+         *  * System.out.println("Cor:
+         *  * this.cor = entrada.next
+         *  * System.out.println("Placa:
+         *  * this.placa = entrada.next
+         *  * System.out.println("Renavam:
+         *  * this.renavam = entrada.nextInt
+         *  * System.out.println("Número de Pneus:
+         *  * this.numeroPneus = entrada.nextInt
+         *  * System.out.println("Número de Passageiros:
+         *  * this.numeroPassageiros = entrada.nextInt
+         *  * System.out.println("Veiculo cadastrado com sucesso !");
+         */
+
+        this.marca = JOptionPane.showInputDialog("Marca:");
+        this.modelo = JOptionPane.showInputDialog("Modelo:");
+        this.anoModelo = JOptionPane.showInputDialog("Ano do modelo:");
+        this.anoFabricacao = JOptionPane.showInputDialog("Ano de Fabricação:");
+
+        // Capturar motorização (double) usando JTextField para garantir entrada válida
+        JTextField motorizacaoField = new JTextField();
+        JOptionPane.showConfirmDialog(null, motorizacaoField, "Motorização:", JOptionPane.OK_CANCEL_OPTION);
+        this.motorizacao = Double.parseDouble(motorizacaoField.getText());
+
+        this.cor = JOptionPane.showInputDialog("Cor:");
+        this.placa = JOptionPane.showInputDialog("Placa:");
+
+        // Capturar renavam (int) usando JTextField para garantir entrada válida
+        JTextField renavamField = new JTextField();
+        JOptionPane.showConfirmDialog(null, renavamField, "Renavam:", JOptionPane.OK_CANCEL_OPTION);
+        this.renavam = Integer.parseInt(renavamField.getText());
+
+        this.numeroPneus = Integer.parseInt(JOptionPane.showInputDialog("Número de Pneus:"));
+        this.numeroPassageiros = Integer.parseInt(JOptionPane.showInputDialog("Número de Passageiros:"));
+
+        // Exibir mensagem de sucesso
+        JOptionPane.showMessageDialog(null, "Veículo cadastrado com sucesso !");
+
     }
 
     public void veiculoCadastrado() {
@@ -172,7 +202,11 @@ public class Veiculo implements Automovel {
         String nomeDespesa = entrada.next();
         System.out.println("Insira o valor da despesa");
         Double valorDespesa = entrada.nextDouble();
-        System.out.println("Valor total da despesa: R$" +valorDespesa);
+        System.out.println("Valor total da despesa: R$" +  valorDespesa);
+    }
 
+     
+    public void relatorioDespesa() {
+        System.out.println("");
     }
 }
