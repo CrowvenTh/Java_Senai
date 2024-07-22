@@ -2,8 +2,8 @@ package controle;
 
 import java.util.Scanner;
 
-public class Gastos {
-    public static void main(String[] args) {
+public class Menu implements Automovel{
+    public void executarMenu() {
         Scanner entrada = new Scanner(System.in);
         boolean controlador = true;
         Veiculo veiculo = new Veiculo();
@@ -28,10 +28,29 @@ public class Gastos {
                     veiculo.veiculoCadastrado();
                     break;
                 case 3:
+                    veiculo.mediaConsumo();
                     break;
                 case 0:
                     controlador = false;
             }
         }
+    }
+
+    @Override
+    public void cadastrarVeiculo() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'cadastrarVeiculo'");
+    }
+
+    @Override
+    public void veiculoCadastrado() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'veiculoCadastrado'");
+    }
+
+    @Override
+    public void mediaConsumo() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'mediaConsumo'");
     }
 }

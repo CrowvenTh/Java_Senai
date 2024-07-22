@@ -2,7 +2,7 @@ package controle;
 
 import java.util.Scanner;
 
-public class Veiculo {
+public class Veiculo implements Automovel {
     private String marca;
     private String modelo;
     private String anoModelo;
@@ -124,7 +124,7 @@ public class Veiculo {
         System.out.println("Ano de Fabricação:");
         this.anoFabricacao = entrada.next();
         System.out.println("Motorização:");
-        this.motorizacao  = entrada.nextDouble();
+        this.motorizacao = entrada.nextDouble();
         System.out.println("Cor:");
         this.cor = entrada.next();
         System.out.println("Placa:");
@@ -152,12 +152,27 @@ public class Veiculo {
         System.out.println("===============\n");
     }
 
-    public void MediaConsumo(){
+    public void mediaConsumo() {
         Scanner entrada = new Scanner(System.in);
         System.out.println("Insira a distancia percorrida inicial(km)");
         double distancialInicial = entrada.nextDouble();
         System.out.println("Insira a distancia percorrida final(km)");
+        double distanciaFinal = entrada.nextDouble();
         System.out.println("Insira a quantidade de combustivel inserida");
+        double combustivelInserido = entrada.nextDouble();
+        double distanciaPercorrida = distanciaFinal - distancialInicial;
+        double kmPorLitro = distanciaPercorrida / combustivelInserido;
+        System.out.println("O veículo percorre " + distanciaPercorrida + " a cada " + kmPorLitro + "L de combustível.");
+    }
+
+    public void cadastroDespesa() {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("Insira o tipo de despesa");
+        String nomeDespesa = entrada.next();
+        System.out.println("Insira o valor da despesa");
+        Double valorDespesa = entrada.nextDouble();
+        System.out.println("Valor total da despesa: R$" +valorDespesa);
 
     }
 }
