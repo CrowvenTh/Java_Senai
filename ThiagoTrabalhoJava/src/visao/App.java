@@ -1,6 +1,5 @@
 package visao;
 
-import controle.Automovel;
 import controle.Menu;
 import controle.Veiculo;
 
