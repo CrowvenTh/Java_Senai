@@ -19,27 +19,22 @@ import jakarta.validation.constraints.Size;
 public class Aluno {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "Matricula")
+    @Size(min = 5, max = 50, message = "A matricula deve conter entre 5 a 50 caracteres")
+    @NotNull
+    private Long matricula;
+    
     @Column(name = "Nome")
+    @NotNull
     @Size(min = 3, max = 50, message = "O nome deve conter entre 3 e 50 caracteres")
     @NotBlank(message = "O nome não pode ser vazio")
-    @NotNull
     private String nome;
 
     @Column(name = "Disciplina")
     @Enumerated(EnumType.STRING)
     @NotNull
-    private String Disciplina;
-
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
-    @Column(name = "Matricula")
-    @NotNull
-    @Size(min = 5, max = 50, message = "A matricula deve conter entre 5 a 50 caracteres")
-    private String matricula;
+    private String disciplina;
 
     @Column(name = "Turno")
     @Enumerated(EnumType.STRING)
@@ -61,14 +56,6 @@ public class Aluno {
     @NotBlank(message = "Insira o sexo")
     private String sexo;
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public String getNome() {
         return nome;
     }
@@ -77,11 +64,11 @@ public class Aluno {
         this.nome = nome;
     }
 
-    public String getMatricula() {
+    public Long getMatricula() {
         return matricula;
     }
 
-    public void setMatricula(String matricula) {
+    public void setMatricula(Long matricula) {
         this.matricula = matricula;
     }
 

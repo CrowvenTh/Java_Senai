@@ -1,5 +1,6 @@
 package Model;
 
+<<<<<<< Updated upstream
 
 
 @Entity
@@ -39,3 +40,8 @@ public class Resultados {
 }
 
 
+=======
+public class Resultados {
+
+}
+>>>>>>> Stashed changes
