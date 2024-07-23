@@ -1,7 +1,14 @@
 package Model;
 
-<<<<<<< Updated upstream
-
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "Resultdos")
@@ -13,35 +20,20 @@ public class Resultados {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "Matricula")
-    public Aluno getMatricula(){
+    public Aluno getMatricula() {
 
         @OneToOne(cascade = CascadeType.ALL)
         @JoinColumn(name = "Id Disciplina", referencedColumnName = "Id Disciplina")
         private Disciplinas idDis;
-        
-        public long getId() {
-            return id;
-        }
-    
-    
-        public long getId() {
-            return id;
-        }
-    
-        public void setId(long id) {
-            this.id = id;
-        }
-        public void setId(long id) {
-            this.id = id;
-        }
+        return null;
+    }
 
+    public long getIdRes() {
+        return idRes;
+    }
+
+    public void setIdRes(long idRes) {
+        this.idRes = idRes;
     }
 
 }
-
-
-=======
-public class Resultados {
-
-}
->>>>>>> Stashed changes
