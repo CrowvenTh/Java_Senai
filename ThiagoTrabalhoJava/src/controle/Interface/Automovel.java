@@ -1,4 +1,4 @@
-package controle;
+package controle.Interface;
 
 public interface Automovel {
     void cadastrarVeiculo();

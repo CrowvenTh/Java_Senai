@@ -1,5 +1,6 @@
 package controle;
 
+import controle.Interface.Automovel;
 import java.util.Scanner;
 
 public class Menu implements Automovel{
