@@ -8,6 +8,7 @@ public class App{
         Veiculo veiculo = new Veiculo();
         Menu menu = new Menu();
 
-        menu.executarMenu();
+        // menu.executarMenu();
+        veiculo.cadastroDespesa();
     }
 }

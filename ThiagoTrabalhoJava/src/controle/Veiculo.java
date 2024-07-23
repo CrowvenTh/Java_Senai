@@ -166,18 +166,4 @@ public class Veiculo implements Automovel {
         double kmPorLitro = distanciaPercorrida / combustivelInserido;
         System.out.println("O veículo percorre " + distanciaPercorrida + " a cada " + kmPorLitro + "L de combustível.");
     }
-
-    public void cadastroDespesa() {
-        Scanner entrada = new Scanner(System.in);
-
-        System.out.println("Insira o tipo de despesa");
-        String nomeDespesa = entrada.next();
-        System.out.println("Insira o valor da despesa");
-        Double valorDespesa = entrada.nextDouble();
-        System.out.println("Valor total da despesa: R$" + valorDespesa);
-    }
-
-    public void relatorioDespesa() {
-        System.out.println("");
-    }
 }
