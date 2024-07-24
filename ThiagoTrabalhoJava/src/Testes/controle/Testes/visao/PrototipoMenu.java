@@ -1,13 +1,15 @@
-package controle;
+package controle.Testes.visao;
 
 import controle.Interface.Automovel;
+
 import java.util.Scanner;
 
-public class Menu implements Automovel{
-    public void executarMenu() {
+public class PrototipoMenu implements Automovel{
+    public void PrototipoexecutarMenu() {
         Scanner entrada = new Scanner(System.in);
         boolean controlador = true;
-        Veiculo veiculo = new Veiculo();
+        PrototipoVeiculo veiculo = new PrototipoVeiculo();
+        Gastos gastos = new Gastos();
 
         while (controlador) {
             System.out.println("=== Escolha a opção ===");
@@ -29,7 +31,7 @@ public class Menu implements Automovel{
                     veiculo.veiculoCadastrado();
                     break;
                 case 3:
-                    veiculo.mediaConsumo();
+                    gastos.cadastroDespesa();
                     break;
                 case 0:
                     controlador = false;
@@ -53,5 +55,11 @@ public class Menu implements Automovel{
     public void mediaConsumo() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'mediaConsumo'");
+    }
+
+    @Override
+    public void cadastroDespesa() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'cadastroDespesa'");
     }
 }

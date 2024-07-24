@@ -161,6 +161,7 @@ public class CadastroVeiculosTeste {
             "Número de Pneus:", numeroPneusField,
             "Número de Passageiros:", numeroPassageirosField
         };
+    
 
         int option = JOptionPane.showConfirmDialog(null, message, "Cadastrar Veículo", JOptionPane.OK_CANCEL_OPTION);
         if (option == JOptionPane.OK_OPTION) {
