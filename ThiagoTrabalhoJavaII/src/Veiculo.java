@@ -216,5 +216,8 @@ public class Veiculo {
                 this.cor, this.placa, this.renavam, this.numeroPneus, this.assentos);
         JOptionPane.showMessageDialog(null, mensagem, "Dados do Veículo", JOptionPane.INFORMATION_MESSAGE);
     }
+    public static List<Veiculo> getVeiculos(){
+        return veiculos;
+    }
 
 }
