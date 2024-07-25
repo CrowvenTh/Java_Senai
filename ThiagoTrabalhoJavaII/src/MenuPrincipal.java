@@ -1,6 +1,10 @@
 import javax.swing.JOptionPane;
 
 public class MenuPrincipal {
+
+    Veiculo veiculo = new Veiculo();
+    Gastos gasto = new Gastos();
+
     public void exibirMenu() {
 
         while (true) {
@@ -13,20 +17,20 @@ public class MenuPrincipal {
                     JOptionPane.PLAIN_MESSAGE,
                     null,
                     options,
-                    options[1]);
+                    options[0]);
 
             switch (escolha) {
-                case 1:
-                    Veiculo veiculo = new Veiculo();
+                case 0:
+
                     veiculo.cadastrarVeiculo();
                     break;
-                case 2:
+                case 1:
                     // veiculo.veiculosCadastrados();
                     break;
-                case 3:
-                    // Lógica para "Gestão de Gastos"
+                case 2:
+                    menuGastos();
                     break;
-                case 4:
+                case 3:
                     System.exit(0);
                     break;
             }
@@ -34,7 +38,7 @@ public class MenuPrincipal {
     }
 
     public void menuGastos() {
-        Gastos gasto = new Gastos();
+
         while (true) {
             String[] options = new String[] { "Cadastrar Despesa", "Mostrar Despesas Cadastradas", "Voltar" };
             int escolha = JOptionPane.showOptionDialog(
@@ -55,7 +59,7 @@ public class MenuPrincipal {
                     gasto.mostrarGasto();
                     break;
                 case 2:
-                    System.exit(0);
+                    exibirMenu();
                 default:
                     throw new AssertionError();
             }
