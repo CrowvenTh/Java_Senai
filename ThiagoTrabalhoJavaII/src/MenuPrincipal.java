@@ -1,37 +1,38 @@
-
 import javax.swing.JOptionPane;
 
 public class MenuPrincipal {
-    public void exibirMenu(){
-        while(true){
-            String escolha = (String) JOptionPane.showInputDialog(
-                null,
-                "Escolha uma opção",
-                "Bem vindo á Turistando",
-                JOptionPane.PLAIN_MESSAGE,
-                null,
-                new String[]{"Cadastrar Veículos","Veículos Cadastrados","Gestão de Gastos","Sair"},
-                "Cadastrar Veiculo");
-            
-                if(escolha == null){
-                    continue;
-                }
-                switch (escolha) {
-                    case "Cadastrar Veículo":
-                        
-                        break;
-                    case "Mostrar Veículo":
-                        
-                        break;
-                    case "Gestão de Gastos":
-                        
-                        break;
-                    case "Sair":
-                        System.exit(0);
-                        break;
-                    default:
-                        throw new AssertionError();
-                }
+    public void exibirMenu() {
+        Veiculo veiculo = new Veiculo();
+        while (true) {
+            String[] options = new String[] { "Cadastrar Veículo", "Veículos Cadastrados", "Gestão de Gastos", "Sair" };
+            int escolha = JOptionPane.showOptionDialog(
+                    null,
+                    "Escolha uma opção",
+                    "Bem-vindo à Turistando",
+                    JOptionPane.DEFAULT_OPTION,
+                    JOptionPane.PLAIN_MESSAGE,
+                    null,
+                    options,
+                    options[0]);
+
+            switch (escolha) {
+                case 0:
+                    veiculo.cadastrarVeiculo();
+                    break;
+                case 1:
+                    // Lógica para "Veículos Cadastrados"
+                    break;
+                case 2:
+                    // Lógica para "Gestão de Gastos"
+                    break;
+                case 3:
+                    // Encerrar o programa
+                    System.exit(0);
+                    break;
+                default:
+                    // Opção inválida ou Cancelar
+                    break;
+            }
         }
     }
 }

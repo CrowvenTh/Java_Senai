@@ -44,3 +44,9 @@ REQUISITOS MINIMOS:
 
     - o calculo de consumo de combustivel só poderá ser realizado 
     quando houver no minimo dois abastecimentos completos cadastrados
+
+
+    Referências:
+
+    https://brunoagt.wordpress.com/category/java-javax-swing/
+    
