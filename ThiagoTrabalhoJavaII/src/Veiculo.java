@@ -202,21 +202,28 @@ public class Veiculo {
                         JOptionPane.ERROR_MESSAGE);
             }
         } else {
-            System.out.println("Operação cancelada");
+            JOptionPane.showMessageDialog(null, "Cadastro Realizado com sucesso");
         }
     }
 
     public void veiculosCadastrados() {
         String mensagem = String.format("Veículo cadastrado:\n" +
-                "Marca: %s\nModelo: %s\nAno Modelo: %s\nAno Fabricação: %s\n" +
-                "Motorização: %.2f\nCapacidade do Tanque: %.2f\nTipo de Combustível: %s\n" +
-                "Cor: %s\nPlaca: %s\nRenavam: %d\nNúmero de Pneus: %d\nNúmero de Assentos: %d",
-                this.marca, this.modelo, this.anoModelo, this.anoFabricacao,
-                this.motorizacao, this.capacidadeTanque, this.tipoCombustivel,
-                this.cor, this.placa, this.renavam, this.numeroPneus, this.assentos);
+                "Marca: %s" + this.marca +
+                "\nModelo: %s" + this.modelo +
+                "\nAno Modelo: %s" + this.anoModelo +
+                "\nAno Fabricação: %s" + this.anoFabricacao +
+                "\nMotorização: %.2f" + this.motorizacao +
+                "\nCapacidade do Tanque: %.2f" + this.capacidadeTanque +
+                "\nTipo de Combustível: %s" + this.tipoCombustivel +
+                "\nCor: %s" + this.cor +
+                "\nPlaca: %s" + this.placa +
+                "\nRenavam: %d" + this.renavam +
+                "\nNúmero de Pneus: %d" + this.numeroPneus +
+                "\nNúmero de Assentos: %d" + this.assentos);
         JOptionPane.showMessageDialog(null, mensagem, "Dados do Veículo", JOptionPane.INFORMATION_MESSAGE);
     }
-    public static List<Veiculo> getVeiculos(){
+
+    public static List<Veiculo> getVeiculos() {
         return veiculos;
     }
 
