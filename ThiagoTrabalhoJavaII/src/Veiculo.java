@@ -1,4 +1,6 @@
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -18,6 +20,8 @@ public class Veiculo {
     private int renavam;
     private int numeroPneus;
     private int assentos;
+
+    private static List<Veiculo> veiculos = new ArrayList<>();
 
     public String getMarca() {
         return marca;
@@ -154,7 +158,7 @@ public class Veiculo {
         painel.add(campoRenavam);
         painel.add(new JLabel("Número de Pneus:"));
         painel.add(campoNumeroPneus);
-        painel.add(new JLabel("Número de Passageiros:"));
+        painel.add(new JLabel("Número de Assentos:"));
         painel.add(campoNumerAssentos);
 
         int resultado = JOptionPane.showConfirmDialog(null, painel, "Cadastro de Veículo", JOptionPane.OK_CANCEL_OPTION,
@@ -173,6 +177,8 @@ public class Veiculo {
                 this.renavam = Integer.parseInt(campoRenavam.getText());
                 this.numeroPneus = Integer.parseInt(campoNumeroPneus.getText());
                 this.assentos = Integer.parseInt(campoNumerAssentos.getText());
+
+                veiculos.add(this);
 
                 JOptionPane.showMessageDialog(null, "Veículo cadastrado com sucesso!", "Sucesso",
                         JOptionPane.INFORMATION_MESSAGE);
@@ -198,6 +204,17 @@ public class Veiculo {
         } else {
             System.out.println("Operação cancelada");
         }
+    }
+
+    public void veiculosCadastrados() {
+        String mensagem = String.format("Veículo cadastrado:\n" +
+                "Marca: %s\nModelo: %s\nAno Modelo: %s\nAno Fabricação: %s\n" +
+                "Motorização: %.2f\nCapacidade do Tanque: %.2f\nTipo de Combustível: %s\n" +
+                "Cor: %s\nPlaca: %s\nRenavam: %d\nNúmero de Pneus: %d\nNúmero de Assentos: %d",
+                this.marca, this.modelo, this.anoModelo, this.anoFabricacao,
+                this.motorizacao, this.capacidadeTanque, this.tipoCombustivel,
+                this.cor, this.placa, this.renavam, this.numeroPneus, this.assentos);
+        JOptionPane.showMessageDialog(null, mensagem, "Dados do Veículo", JOptionPane.INFORMATION_MESSAGE);
     }
 
 }

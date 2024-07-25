@@ -20,17 +20,13 @@ public class MenuPrincipal {
                     veiculo.cadastrarVeiculo();
                     break;
                 case 1:
-                    // Lógica para "Veículos Cadastrados"
+                    veiculo.veiculosCadastrados();
                     break;
                 case 2:
                     // Lógica para "Gestão de Gastos"
                     break;
                 case 3:
-                    // Encerrar o programa
                     System.exit(0);
-                    break;
-                default:
-                    // Opção inválida ou Cancelar
                     break;
             }
         }
