@@ -1,11 +1,12 @@
 
 import javax.swing.BoxLayout;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class Gastos {
+public class Gastos extends Veiculo {
     private String tipo;
     private String descricao;
     private double valor;
@@ -60,7 +61,28 @@ public class Gastos {
         String mensagem = String.format("Despesa Cadastrada:\n" +
                 "Tipo: %s\nDescrição:%s\n" +
                 "Valor: %.2f", this.tipo, this.descricao, this.valor);
-                JOptionPane.showMessageDialog(null, mensagem,"Dados da Despesa",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, mensagem, "Dados da Despesa", JOptionPane.INFORMATION_MESSAGE);
     }
 
+    public void comboBox() {
+        String[] opcoes = { "Multa", "Manutenção", "Imposto", "Pedágio", "Balsa", "Outros" };
+        JComboBox<String> comboBox = new JComboBox<>(opcoes);
+
+        int escolha = JOptionPane.showConfirmDialog(
+                null,
+                comboBox,
+                "Selecione uma opção",
+                JOptionPane.OK_CANCEL_OPTION,
+                JOptionPane.PLAIN_MESSAGE);
+
+        if (escolha == JOptionPane.OK_OPTION) {
+            String opcaoSelecionada = (String) comboBox.getSelectedItem();
+            JOptionPane.showMessageDialog(
+                    null,
+                    "Você selecionou: " + opcaoSelecionada,
+                    "Opção selecionada",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+
+    }
 }

@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.BoxLayout;
@@ -28,7 +27,7 @@ public class Veiculo {
     }
 
     public void setMarca(String marca) {
-        this.marca = marca;
+        this.marca = marca.toUpperCase();
     }
 
     public String getModelo() {
@@ -36,7 +35,7 @@ public class Veiculo {
     }
 
     public void setModelo(String modelo) {
-        this.modelo = modelo;
+        this.modelo = modelo.toUpperCase();
     }
 
     public String getAnoModelo() {
@@ -44,7 +43,7 @@ public class Veiculo {
     }
 
     public void setAnoModelo(String anoModelo) {
-        this.anoModelo = anoModelo;
+        this.anoModelo = anoModelo.toUpperCase();
     }
 
     public String getAnoFabricacao() {
@@ -76,7 +75,7 @@ public class Veiculo {
     }
 
     public void setTipoCombustivel(String tipoCombustivel) {
-        this.tipoCombustivel = tipoCombustivel;
+        this.tipoCombustivel = tipoCombustivel.toUpperCase();
     }
 
     public String getCor() {
@@ -84,7 +83,7 @@ public class Veiculo {
     }
 
     public void setCor(String cor) {
-        this.cor = cor;
+        this.cor = cor.toUpperCase();
     }
 
     public String getPlaca() {
@@ -92,7 +91,7 @@ public class Veiculo {
     }
 
     public void setPlaca(String placa) {
-        this.placa = placa;
+        this.placa = placa.toUpperCase();
     }
 
     public int getRenavam() {
