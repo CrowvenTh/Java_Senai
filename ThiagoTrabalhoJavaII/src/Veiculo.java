@@ -1,13 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.BoxLayout;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
 
 public class Veiculo {
-    private String marca;
+    protected String marca;
     private String modelo;
     private String anoModelo;
     private String anoFabricacao;
@@ -110,11 +106,11 @@ public class Veiculo {
         this.numeroPneus = numeroPneus;
     }
 
-    public int getNumerAssentos() {
+    public int getAssentos() {
         return assentos;
     }
 
-    public void setNumerAssentos(int assentos) {
+    public void setAssentos(int assentos) {
         this.assentos = assentos;
     }
 
@@ -162,68 +158,54 @@ public class Veiculo {
 
         int resultado = JOptionPane.showConfirmDialog(null, painel, "Cadastro de Veículo", JOptionPane.OK_CANCEL_OPTION,
                 JOptionPane.PLAIN_MESSAGE);
-        if (resultado == JOptionPane.OK_CANCEL_OPTION) {
-            try {
-                this.marca = campoMarca.getText();
-                this.modelo = campoModelo.getText();
-                this.anoModelo = campoAnoModelo.getText();
-                this.anoFabricacao = campoAnoFabricacao.getText();
-                this.motorizacao = Double.parseDouble(campoMotorizacao.getText());
-                this.capacidadeTanque = Double.parseDouble(campoCapacidadeTanque.getText());
-                this.tipoCombustivel = campoTipoCombustivel.getText();
-                this.cor = campoCor.getText();
-                this.placa = campoPlaca.getText();
-                this.renavam = Integer.parseInt(campoRenavam.getText());
-                this.numeroPneus = Integer.parseInt(campoNumeroPneus.getText());
-                this.assentos = Integer.parseInt(campoNumerAssentos.getText());
+        if (resultado == JOptionPane.OK_OPTION) {
+            Veiculo novoVeiculo = new Veiculo();
+            novoVeiculo.setMarca(campoMarca.getText());
+            novoVeiculo.setModelo(campoModelo.getText());
+            novoVeiculo.setAnoModelo(campoAnoModelo.getText());
+            novoVeiculo.setAnoFabricacao(campoAnoFabricacao.getText());
+            novoVeiculo.setMotorizacao(Double.parseDouble(campoMotorizacao.getText()));
+            novoVeiculo.setCapacidadeTanque(Double.parseDouble(campoCapacidadeTanque.getText()));
+            novoVeiculo.setTipoCombustivel(campoTipoCombustivel.getText());
+            novoVeiculo.setCor(campoCor.getText());
+            novoVeiculo.setPlaca(campoPlaca.getText());
+            novoVeiculo.setRenavam(Integer.parseInt(campoRenavam.getText()));
+            novoVeiculo.setNumeroPneus(Integer.parseInt(campoNumeroPneus.getText()));
+            novoVeiculo.setAssentos(Integer.parseInt(campoNumerAssentos.getText()));
 
-                veiculos.add(this);
+            veiculos.add(novoVeiculo);
 
-                JOptionPane.showMessageDialog(null, "Veículo cadastrado com sucesso!", "Sucesso",
-                        JOptionPane.INFORMATION_MESSAGE);
-
-                System.out.println("Veículo cadastrado com sucesso!");
-                System.out.println("Marca: " + this.marca);
-                System.out.println("Modelo: " + this.modelo);
-                System.out.println("Ano Modelo: " + this.anoModelo);
-                System.out.println("Ano Fabricação: " + this.anoFabricacao);
-                System.out.println("Motorização: " + this.motorizacao);
-                System.out.println("Capacidade do Tanque: " + this.capacidadeTanque);
-                System.out.println("Tipo de Combustível: " + this.tipoCombustivel);
-                System.out.println("Cor: " + this.cor);
-                System.out.println("Placa: " + this.placa);
-                System.out.println("Renavam: " + this.renavam);
-                System.out.println("Número de Pneus: " + this.numeroPneus);
-                System.out.println("Número de Passageiros: " + this.assentos);
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(null,
-                        "Erro ao processar os dados. Verifique se todos os campos numéricos estão corretos.", "Erro",
-                        JOptionPane.ERROR_MESSAGE);
-            }
-        } else {
-            JOptionPane.showMessageDialog(null, "Cadastro Realizado com sucesso");
+            JOptionPane.showMessageDialog(null, "Veículo cadastrado com sucesso!", "Sucesso",
+                    JOptionPane.INFORMATION_MESSAGE);
         }
     }
 
-    public void veiculosCadastrados() {
-        String mensagem = String.format("Veículo cadastrado:\n" +
-                "Marca: %s" + this.marca +
-                "\nModelo: %s" + this.modelo +
-                "\nAno Modelo: %s" + this.anoModelo +
-                "\nAno Fabricação: %s" + this.anoFabricacao +
-                "\nMotorização: %.2f" + this.motorizacao +
-                "\nCapacidade do Tanque: %.2f" + this.capacidadeTanque +
-                "\nTipo de Combustível: %s" + this.tipoCombustivel +
-                "\nCor: %s" + this.cor +
-                "\nPlaca: %s" + this.placa +
-                "\nRenavam: %d" + this.renavam +
-                "\nNúmero de Pneus: %d" + this.numeroPneus +
-                "\nNúmero de Assentos: %d" + this.assentos);
-        JOptionPane.showMessageDialog(null, mensagem, "Dados do Veículo", JOptionPane.INFORMATION_MESSAGE);
+    public static void listarVeiculosCadastrados() {
+        if (veiculos.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Não há veículos cadastrados ainda.", "Lista de Veículos",
+                    JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            StringBuilder sb = new StringBuilder();
+            for (Veiculo veiculo : veiculos) {
+                sb.append("Marca: ").append(veiculo.getMarca()).append("\n");
+                sb.append("Modelo: ").append(veiculo.getModelo()).append("\n");
+                sb.append("Ano Modelo: ").append(veiculo.getAnoModelo()).append("\n");
+                sb.append("Ano Fabricação: ").append(veiculo.getAnoFabricacao()).append("\n");
+                sb.append("Motorização: ").append(veiculo.getMotorizacao()).append("\n");
+                sb.append("Capacidade do Tanque: ").append(veiculo.getCapacidadeTanque()).append("\n");
+                sb.append("Tipo de Combustível: ").append(veiculo.getTipoCombustivel()).append("\n");
+                sb.append("Cor: ").append(veiculo.getCor()).append("\n");
+                sb.append("Placa: ").append(veiculo.getPlaca()).append("\n");
+                sb.append("Renavam: ").append(veiculo.getRenavam()).append("\n");
+                sb.append("Número de Pneus: ").append(veiculo.getNumeroPneus()).append("\n");
+                sb.append("Número de Assentos: ").append(veiculo.getAssentos()).append("\n\n");
+            }
+            JOptionPane.showMessageDialog(null, sb.toString(), "Veículos Cadastrados", JOptionPane.INFORMATION_MESSAGE);
+        }
     }
 
-    public static List<Veiculo> getVeiculos() {
-        return veiculos;
+    public void adicionarGasto(Gastos gastos) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'adicionarGasto'");
     }
-
 }
