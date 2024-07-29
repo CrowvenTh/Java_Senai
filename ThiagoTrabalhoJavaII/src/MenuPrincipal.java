@@ -9,6 +9,7 @@ public class MenuPrincipal {
 
         while (true) {
             String[] options = new String[] { "Cadastrar Veículo", "Veículos Cadastrados", "Gestão de Gastos", "Sair" };
+            
             int escolha = JOptionPane.showOptionDialog(
                     null,
                     "Escolha uma opção",
@@ -21,11 +22,10 @@ public class MenuPrincipal {
 
             switch (escolha) {
                 case 0:
-
                     veiculo.cadastrarVeiculo();
                     break;
                 case 1:
-                    // veiculo.veiculosCadastrados();
+                    veiculo.listarVeiculosCadastrados();
                     break;
                 case 2:
                     menuGastos();
@@ -40,7 +40,7 @@ public class MenuPrincipal {
     public void menuGastos() {
 
         while (true) {
-            String[] options = new String[] { "Cadastrar Despesa", "Mostrar Despesas Cadastradas", "Voltar" };
+            String[] options = new String[] { "Cadastrar Despesa", "Abastecer Veículo", "Mostrar Despesas Cadastradas", "Voltar" };
             int escolha = JOptionPane.showOptionDialog(
                     null,
                     "Selecione",
@@ -53,13 +53,17 @@ public class MenuPrincipal {
 
             switch (escolha) {
                 case 0:
-                    gasto.cadastrarGasto();
+                    gasto.cadastrarGasto(veiculo);
                     break;
                 case 1:
-                    gasto.mostrarGasto();
+                    gasto.abastecerVeiculo(veiculo);
                     break;
                 case 2:
+                    gasto.mostrarGastos();
+                    break;
+                case 3:
                     exibirMenu();
+                    break;
                 default:
                     throw new AssertionError();
             }
