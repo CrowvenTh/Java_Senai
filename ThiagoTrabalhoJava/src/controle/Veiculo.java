@@ -32,7 +32,7 @@ public class Veiculo {
 	}
 
 	public void setMarca(String marca) {
-		this.marca = marca.toUpperCase();
+		this.marca = marca;
 	}
 
 	public String getModelo() {
@@ -40,7 +40,7 @@ public class Veiculo {
 	}
 
 	public void setModelo(String modelo) {
-		this.modelo = modelo.toUpperCase();
+		this.modelo = modelo;
 	}
 
 	public String getAnoModelo() {
@@ -80,7 +80,7 @@ public class Veiculo {
 	}
 
 	public void setCor(String cor) {
-		this.cor = cor.toUpperCase();
+		this.cor = cor;
 	}
 
 	public String getPlaca() {
@@ -88,7 +88,7 @@ public class Veiculo {
 	}
 
 	public void setPlaca(String placa) {
-		this.placa = placa.toUpperCase();
+		this.placa = placa;
 	}
 
 	public int getRenavam() {
@@ -208,15 +208,15 @@ public class Veiculo {
 	                    "Renavam: %d\n" +
 	                    "Número de Pneus: %d\n" +
 	                    "Número de Assentos: %d\n\n",
-	                    veiculo.marca,
-	                    veiculo.modelo,
+	                    veiculo.marca.toUpperCase(),
+	                    veiculo.modelo.toUpperCase(),
 	                    veiculo.anoModelo,
 	                    veiculo.anoFabricacao,
 	                    veiculo.motorizacao,
 	                    veiculo.capacidadeTanque,
 	                    veiculo.tipoCombustivel,
-	                    veiculo.cor,
-	                    veiculo.placa,
+	                    veiculo.cor.toUpperCase(),
+	                    veiculo.placa.toUpperCase(),
 	                    veiculo.renavam,
 	                    veiculo.numeroPneus,
 	                    veiculo.assentos));

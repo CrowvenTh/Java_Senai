@@ -29,5 +29,4 @@ public class Gasto {
     public String toString() {
         return String.format("Descrição: %s\nValor: %.2f\nData: %s\n", descricao, valor, data);
     }
-    
 }
