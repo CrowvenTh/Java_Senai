@@ -170,7 +170,7 @@ public class Veiculo {
 	                this.anoFabricacao = campoAnoFabricacao.getText();
 	                this.motorizacao = Double.parseDouble(campoMotorizacao.getText());
 	                this.capacidadeTanque = Double.parseDouble(campoCapacidadeTanque.getText());
-	                this.tipoCombustivel =  (Enum) comboTipoCombustivel.getSelectedItem();
+	                this.tipoCombustivel = (TipoCombustivel) comboTipoCombustivel.getSelectedItem();
 	                this.cor = campoCor.getText();
 	                this.placa = campoPlaca.getText();
 	                this.renavam = Integer.parseInt(campoRenavam.getText());
@@ -180,7 +180,7 @@ public class Veiculo {
 	                veiculos.add(this);
 
 	                JOptionPane.showMessageDialog(null, "Veículo cadastrado com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
-	            } catch (Exception e) {
+	            } catch (NumberFormatException e) {
 	                JOptionPane.showMessageDialog(null, "Erro ao processar os dados. Verifique se todos os campos numéricos estão corretos.", "Erro", JOptionPane.ERROR_MESSAGE);
 	            }
 	        } else {

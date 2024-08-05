@@ -46,7 +46,7 @@ public class MenuPrincipal {
             int escolha = JOptionPane.showOptionDialog(
                     null,
                     "Selecione",
-                    "Gestão de controle.MenuPrincipal.Gastos",
+                    "Gestão de controle",
                     JOptionPane.DEFAULT_OPTION,
                     JOptionPane.PLAIN_MESSAGE,
                     null,
@@ -62,6 +62,9 @@ public class MenuPrincipal {
                     break;
                 case 2:
                     // abastecimento do veculo
+                	break;
+                case 3:
+                	exibirMenu();
                 default:
                     throw new AssertionError();
             }
