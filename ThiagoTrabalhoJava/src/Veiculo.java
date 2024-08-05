@@ -205,7 +205,6 @@ public class Veiculo {
     }
 
     public void adicionarGasto(Gastos gastos) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'adicionarGasto'");
     }
 }
