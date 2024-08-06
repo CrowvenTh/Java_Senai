@@ -1,7 +1,0 @@
-{
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "d:\\Users\\ALUNO\\Desktop\\json-20240303.jar",
-        "d:\\Users\\ALUNO\\Desktop\\json-simple-2.1.2.jar"
-    ]
-}
