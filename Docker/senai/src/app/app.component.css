@@ -1,0 +1,22 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(245, 245, 245);
+    background-color: rgba(36, 5, 5, 0.945);
+    text-align: center;
+  }
+  button{
+    border-radius: 12px;
+    border-color: rgba(88, 57, 57, 0.603);
+    width: 250px;
+    height: 40px;
+  }
+  button:hover{
+    border-color: rgba(245, 245, 245);
+    background-color: rgba(88, 57, 57, 0.603);
+    color: rgba(245, 245, 245);
+    width: 260px;
+    height: 45px;
+  }
+  img{
+    border-radius: 21px;
+  }
