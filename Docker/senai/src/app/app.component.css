@@ -1,4 +1,4 @@
-body{
+/* body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(245, 245, 245);
     background-color: rgba(36, 5, 5, 0.945);
@@ -19,4 +19,26 @@ body{
   }
   img{
     border-radius: 21px;
+  } */
+
+  body{
+    text-align: center;
+    background-color: rgb(22, 77, 58);
+    color: aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  form{
+    margin: 0 auto;
+    /* border: solid; */
+    border-color: aliceblue;
+    border-radius: 12px;
+    width: 20%;
+  }
+  input{
+    border-radius: 4px;
+  }
+  button{
+    border-radius: 6x;
+    width: 90px;
+    height: 30px;
   }

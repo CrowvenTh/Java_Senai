@@ -101,15 +101,44 @@
 </style>
  -->
 
-<body>
+<!-- <body>
   <h2>Meus primeiros códigos com JS</h2>
   <p id="botao"></p>
   <button type="button" onclick="document.getElementById('botao').innerHTML = Date()"> Clique aqui para ter uma
     surpresa. </button>
+  <br>
+  <br>
+  <br>
+  <img src="https://th.bing.com/th/id/R.2ac93011db01822e89a9b98bfb94b119?rik=39LlswP7qM2GAQ&pid=ImgRaw&r=0"
+    alt="GIF animado">
+</body> -->
+
+<body>
+  <h2>Formulário</h2>
+  <br>
+  <form>
+    <label for="nome">Insira seu nome:</label><br>
+    <input type="text" id="nome" name="nome"><br>
+    <label for="nome">Insira sua idade:</label><br>
+    <input type="number" id="idade" name="idade"><br>
+    <label for="nome">Insira seu endereço:</label><br>
+    <input type="text" id="endereco" name="endereco"><br>
     <br>
+    <button type="submit" id="enviar" name="enviar">Enviar</button>
     <br>
-    <br>
-  <img src="https://th.bing.com/th/id/R.9927413868475ba8913f4c2c08cbb2b7?rik=VuygcTyuaa6Tbg&pid=ImgRaw&r=0" alt="GIF animado">
+    <p id="dados"></p>
+    <button type="button" onclick="document.getElementById('dados').innerHTML = mostrarDados()">Cadastros</button>
+  </form>
+  <script>
+    function mostrarDados() {
+      var nome = document.getElementById("nome").value;
+      var idade = document.getElementById("idade").value;
+      var endereco = document.getElementById("endereco").value;
+      var dados = "Nome: " + nome + "<br>Idade: " + idade + "<br>Endereço: " + endereco;
+      document.getElementById("dados").innerHTML = dados;
+      return dados;
+    }
+  </script>
 </body>
 
 </html>
