@@ -3,142 +3,37 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Cadastro de Veiculo</title>
 </head>
-<!-- 
-<body style="text-align: center; background-color: rgb(64, 114, 83); color: rgb(219, 217, 59);" >
-  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/1200px-Flag_of_Brazil.svg.png" alt="Bandeira do Brasil" style="height: 80px; width: 115px;">
-  <h1 > Hino Nacional Brasileiro </h1>
-  <hr>
-  <p>
-     Ouviram do Ipiranga, as margens plácidas  <br>
-     De um povo heroico, o brado retumbante  <br>
-     E o Sol da liberdade, em raios fúlgidos  <br>
-     Brilhou no céu da pátria nesse instante  <br>
-      <br>
-     Se o penhor dessa igualdade  <br>
-     Conseguimos conquistar com braço forte  <br>
-     Em teu seio, ó liberdade  <br>
-     Desafia o nosso peito a própria morte!  <br>
-      <br>
-     Ó, Pátria amada  <br>
-     Idolatrada  <br>
-     Salve! Salve!  <br>
-      <br>
-     Brasil, um sonho intenso, um raio vívido  <br>
-     De amor e de esperança, à terra desce  <br>
-     Se em teu formoso céu, risonho e límpido  <br>
-     A imagem do Cruzeiro resplandece  <br>
-      <br>
-     Gigante pela própria natureza  <br>
-     És belo, és forte, impávido colosso  <br>
-     E o teu futuro espelha essa grandeza  <br>
-      <br>
-     Terra adorada  <br>
-     Entre outras mil  <br>
-     És tu, Brasil  <br>
-     Ó, Pátria amada!  <br>
-     Dos filhos deste solo, és mãe gentil  <br>
-     Pátria amada  <br>
-     Brasil!  <br>
-      <br>
-     Deitado eternamente em berço esplêndido  <br>
-     Ao som do mar e à luz do céu profundo  <br>
-     Fulguras, ó Brasil, florão da América <br>
-     Iluminado ao Sol do Novo Mundo! <br>
-      <br>
-     Do que a terra, mais garrida <br>
-     Teus risonhos, lindos campos têm mais flores <br>
-     Nossos bosques têm mais vida <br>
-     Nossa vida, no teu seio, mais amores <br>
-      <br>
-     Ó, Pátria amada <br>
-     Idolatrada <br>
-     Salve! Salve! <br>
-      <br>
-     Brasil, de amor eterno seja símbolo <br>
-     O lábaro que ostentas estrelado <br>
-     E diga o verde-louro dessa flâmula <br>
-     Paz no futuro e glória no passado <br>
-      <br>
-     Mas, se ergues da justiça a clava forte <br>
-     Verás que um filho teu não foge à luta <br>
-     Nem teme, quem te adora, a própria morte <br>
-      <br>
-     Terra adorada <br>
-     Entre outras mil <br>
-     És tu, Brasil <br>
-     Ó, Pátria amada! <br>
-     Dos filhos deste solo, és mãe gentil <br>
-     Pátria amada <br>
-     Brasil! <br>
-    </p>
-    <hr>
-</body>
--->
-<!-- 
-  <style>
-  body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(245, 245, 245);
-    background-color: rgba(36, 5, 5, 0.945);
-    text-align: center;
-  }
-  button{
-    border-radius: 12px;
-    border-color: rgba(88, 57, 57, 0.603);
-    width: 250px;
-    height: 40px;
-  }
-  button:hover{
-    border-color: rgba(245, 245, 245);    
-    background-color: rgba(88, 57, 57, 0.603);
-    color: rgba(245, 245, 245);
-    width: 270px;
-    height: 50px;
-  }
-</style>
- -->
-
-<!-- <body>
-  <h2>Meus primeiros códigos com JS</h2>
-  <p id="botao"></p>
-  <button type="button" onclick="document.getElementById('botao').innerHTML = Date()"> Clique aqui para ter uma
-    surpresa. </button>
-  <br>
-  <br>
-  <br>
-  <img src="https://th.bing.com/th/id/R.2ac93011db01822e89a9b98bfb94b119?rik=39LlswP7qM2GAQ&pid=ImgRaw&r=0"
-    alt="GIF animado">
-</body> -->
 
 <body>
-  <h2>Formulário</h2>
-  <br>
-  <form>
-    <label for="nome">Insira seu nome:</label><br>
-    <input type="text" id="nome" name="nome"><br>
-    <label for="nome">Insira sua idade:</label><br>
-    <input type="number" id="idade" name="idade"><br>
-    <label for="nome">Insira seu endereço:</label><br>
-    <input type="text" id="endereco" name="endereco"><br>
-    <br>
-    <button type="submit" id="enviar" name="enviar">Enviar</button>
-    <br>
-    <p id="dados"></p>
-    <button type="button" onclick="document.getElementById('dados').innerHTML = mostrarDados()">Cadastros</button>
+  <form name="cadVeiculo">
+    <h1>Insira os dados do Veiculo</h1>
+
+    <input type="text" id="placaId" placeholder="placa do veiculo" required>
+    <label for="placa">Placa</label>
+    <input type="text" id="modeloId" placeholder="Modelo do veiculo" required>
+    <label for="modelo">Modelo</label>
+    <input type="number" min="1930" max="2026" step="1" value="2024" id="anoFabricacaoId"
+      placeholder="Ano de Fabricação" required #placa>
+    <label for="anoFabricacao">Ano de Fabricação</label>
+    <input type="number" min="1930" max="2026" step="1" value="2024" id="anoModeloId" placeholder="Ano do modelo"
+      required>
+    <label for="anoModelo">Ano do Modelo</label>
+    <input id="botao" type="submit" onclick="alert('informações inseridas com sucesso')">
+
   </form>
-  <script>
-    function mostrarDados() {
-      var nome = document.getElementById("nome").value;
-      var idade = document.getElementById("idade").value;
-      var endereco = document.getElementById("endereco").value;
-      var dados = "Nome: " + nome + "<br>Idade: " + idade + "<br>Endereço: " + endereco;
-      document.getElementById("dados").innerHTML = dados;
-      return dados;
-    }
-  </script>
+  <hr>
+
+  <form action="calculo">
+    <input type="number" id="" placeholder="insira um número" required name="" #numA>
+    <label for="numA"> + </label>
+    <input type="number" id="" placeholder="insira um número" required name="" #numB>
+    <label for=""> = </label>
+    <output name="resultado" for="numAid numBid">XXX</output>
+    <input type="submit" (click) = "soma(numA, numB)" value="Calcular">
+  </form>
 </body>
 
 </html>

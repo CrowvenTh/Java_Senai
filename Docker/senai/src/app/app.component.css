@@ -1,44 +1,46 @@
-/* body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(245, 245, 245);
-    background-color: rgba(36, 5, 5, 0.945);
-    text-align: center;
-  }
-  button{
-    border-radius: 12px;
-    border-color: rgba(88, 57, 57, 0.603);
-    width: 250px;
-    height: 40px;
-  }
-  button:hover{
-    border-color: rgba(245, 245, 245);
-    background-color: rgba(88, 57, 57, 0.603);
-    color: rgba(245, 245, 245);
-    width: 260px;
-    height: 45px;
-  }
-  img{
-    border-radius: 21px;
-  } */
+body{
+  background-color: #006172;
+  color: #e0edf3;
+  padding: 0px;
+  
+}
+form{
+  background-color: #053841;
+  border: solid;
+  border-color: #011d22;
+  margin: auto;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 15px;
+  max-width: 500px;
+}
+h1{
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+input, textarea{
+  width: 200px;
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 10px;
+  color: black;
+}
+textarea{
+  width: 900px;
+  height: 120px;
+  max-width: 400px;
+}
+input:hover, input:focus{
+  border-color: #e0edf3;
+  box-shadow: 5px 0px 10px #011d22;
+  background-color: #006172;
+  color: #e0edf3;
+}
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+  
+}
+input[type=number] { 
+ -moz-appearance: textfield;
+ appearance: textfield;
 
-  body{
-    text-align: center;
-    background-color: rgb(22, 77, 58);
-    color: aliceblue;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  form{
-    margin: 0 auto;
-    /* border: solid; */
-    border-color: aliceblue;
-    border-radius: 12px;
-    width: 20%;
-  }
-  input{
-    border-radius: 4px;
-  }
-  button{
-    border-radius: 6x;
-    width: 90px;
-    height: 30px;
-  }
+}
