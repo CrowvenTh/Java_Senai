@@ -2,6 +2,8 @@
 body{
     padding: 0;
     margin: 10px;
+    background-color: rgb(13, 85, 85);
+    color: aliceblue;
   }
   
   form {
