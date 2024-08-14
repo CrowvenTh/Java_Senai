@@ -19,6 +19,7 @@ public class VeiculoModel {
     private long renavam;
     private double motorizacao;
     private double capacidadeTanque;
+    // @Enumerated(EnumType.STRING)
     private combustivelEnuns combustivel;
 
     public String getPlaca() {
