@@ -1,6 +1,6 @@
 package com.turistando.app.model;
 
-import com.turistando.app.controller.combustivelEnuns;
+import com.turistando.app.controller.Enum.combustivelEnuns;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -10,7 +10,7 @@ public class VeiculoModel {
 
     @Id
     private String placa;
-
+    
     private String marca;
     private String modelo;
     private int anoModelo;
