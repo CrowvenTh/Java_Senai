@@ -1,4 +1,4 @@
-package com.autenticacao.Details;
+package com.autenticacao.Security.Details;
 
 import java.util.Collection;
 import java.util.stream.Collectors;

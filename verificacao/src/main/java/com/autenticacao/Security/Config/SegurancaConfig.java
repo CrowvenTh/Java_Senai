@@ -1,4 +1,4 @@
-package com.autenticacao.Services;
+package com.autenticacao.Security.Config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -6,9 +6,13 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 @Configuration
 @EnableWebSecurity
 public class SegurancaConfig {
-    public static final String [] ENDPOI_AUTENTICATION_NOT_REQUIRED = {
+    public static final String [] ENDPOINTS_AUTENTICATION_NOT_REQUIRED = {
         "/usuario/login",
         "/usuario/create"
+    };
+
+    public static final String [] ENDPOINTS_AUTENTICATION_REQUIRED = {
+        "/usuario/teste"
     };
 
 }
