@@ -1,5 +1,11 @@
 package com.autenticacao.DTOs;
 
-public record CriarUsuarioDTO() {
+import com.autenticacao.Enum.RegrasEnum;
 
+public record CriarUsuarioDTO(
+    String email,
+    String senha,
+    RegrasEnum regras
+){
+       
 }
