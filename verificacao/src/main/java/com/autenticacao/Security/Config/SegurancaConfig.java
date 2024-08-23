@@ -23,7 +23,8 @@ private UsuarioAutenticFiltro usuarioAutenticFiltro;
 
     public static final String[] ENDPOINTS_AUTENTICATION_NOT_REQUIRED = {
             "/usuario/login",
-            "/usuario/create"
+            "/usuario/create",
+            "/usuario/rodou"
     };
 
     public static final String[] ENDPOINTS_AUTENTICATION_REQUIRED = {
@@ -43,7 +44,7 @@ private UsuarioAutenticFiltro usuarioAutenticFiltro;
         return httpSecurity.csrf(csfr -> csfr.disable())
                 .sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authorize -> authorize.requestMatchers(ENDPOINTS_AUTENTICATION_NOT_REQUIRED).permitAll())
-                .authorizeHttpRequests(authorize -> authorize.requestMatchers(ENDPOINTS_AUTENTICATION_REQUIRED).permitAll().anyRequest().authenticated())
+                .authorizeHttpRequests(authorize -> authorize.requestMatchers(ENDPOINTS_AUTENTICATION_REQUIRED).authenticated())
                 .authorizeHttpRequests(authorize -> authorize.requestMatchers(ENDPOINTS_ADMIN).hasRole("Admin"))
                 .authorizeHttpRequests(authorize -> authorize.requestMatchers(ENDPOINTS_CLIENTE).hasRole("Cliente"))
                 .addFilterBefore(usuarioAutenticFiltro, UsernamePasswordAuthenticationFilter.class).build();
